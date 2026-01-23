@@ -1,0 +1,39 @@
+Django is a back-end server side web framework. It is free, open source and written in Python.
+Django is a Python framework that makes it easier to create web sites using Python.
+It takes care of the difficult stuff so that you can concentrate on building your web applications.
+Django emphasizes reusability of components, also referred to as DRY (Don't Repeat Yourself),
+and comes with ready-to-use features like login system, database connection and
+CRUD operations (Create Read Update Delete).
+Django is especially helpful for database driven websites.
+
+
+** Django follows the MVT design pattern (Model View Template).**
+
+Model - The data you want to present, usually data from a database.
+View - A request handler that returns the relevant template and content - based on the request from the user.
+Template - A text file (like an HTML file) containing the layout of the web page,
+ with logic on how to display the data.
+
+ ** What is a Model? **
+ A Model provides data from the databases. That is data used for building the application.
+ In Django, the data is delivered as an Object Relational Mapping (ORM), 
+ which is a technique designed to make it easier to work with databases,
+ One of the common ways we can extract data is using SQL  but the thing is , if you dont
+ have basic undertanding of how that works, its diffcult. So Django uses ORM to make it easier for you.
+ The models/ data is located in a file called models.py
+
+ **  What are View? **
+
+ 
+
+Use the following commands:
+After confirming you have python and pip installed 
+
+Create a virtual env using the command : python -m venv the_name_of_your_virtual_env
+
+Then activate it  using : cd myvenv , cd Scripts , activate
+
+Install Django using : python -m pip install Django
+
+Now your first project using : django-admin startproject 
+
