@@ -22,7 +22,9 @@ Template - A text file (like an HTML file) containing the layout of the web page
  have basic undertanding of how that works, its diffcult. So Django uses ORM to make it easier for you.
  The models/ data is located in a file called models.py
 
- **  What are View? **
+ 
+ 
+## *What are View?*
 
  
 
@@ -36,4 +38,46 @@ Then activate it  using : cd myvenv , cd Scripts , activate
 Install Django using : python -m pip install Django
 
 Now your first project using : django-admin startproject 
+
+
+
+
+** A QuerySet is a collection of data from a database ** 
+to see the values you have added use : Theclassname.objects.all().values e.g Item.objects.all().values()
+
+
+
+``` 
+python manage.py makemigrations my_first_app
+```
+Then:
+```
+python manage.py migrate
+```
+
+Then you activate python shell using :
+```
+python manage.py shell
+```
+
+
+
+Now to add the values :
+```
+from my_first_app.models import Item
+```
+To view vlaues in the table:
+```
+Item.objects.all().values()
+```
+You can now begin to add the values:
+```
+y = Item(name, lastname etc)
+```
+Then save:
+```
+y.save()
+```
+
+
 
