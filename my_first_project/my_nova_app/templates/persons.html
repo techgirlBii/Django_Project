@@ -6,11 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Item</h1>
+    <h1>List of members</h1>
     
     <ul>
         {% for x in persons %}
-            <li>{{ x.firstname }}  {{ x.lastname }}  {{ x.age }} {{ x.address }} {{ x.phone }} </li>
+            <li><a href="more/{{ x.id }}">{{ x.firstname }}  {{ x.lastname }}  </a></li>
         {% endfor %}
     </ul>
 </body>
