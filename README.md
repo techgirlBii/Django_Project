@@ -64,9 +64,9 @@ python manage.py shell
 
 Now to add the values :
 ```
-from my_first_app.models import Item
+from (name of my app ) my_first_app.models import Item (Class name)
 ```
-To view vlaues in the table:
+To view values in the table:
 ```
 Item.objects.all().values()
 ```
@@ -78,6 +78,13 @@ Then save:
 ```
 y.save()
 ```
+You can add other items in that same table using:
+```
+y1 = Item(name, lastname etc)
+y2 = Item(name,lastname etc) ...
+```
+
+
 
 
 

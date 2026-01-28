@@ -1,0 +1,14 @@
+{% extends "master.html" %}
+
+{% block title %}
+    All Items
+{% endblock %}
+
+{% block content %}
+    <h1>{{ myitems.name }}  {{ myitems.lastname }}  {{ myitems.description }} {{ myitems.hobby }} {{ myitems.phone }}</h1>
+
+    <p>Phone : {{ myitems.phone }}</p>
+    <p>Hobby : {{ myitems.hobby }}</p>
+    <p>Back to <a href="/my_first_app">All Items</a></p>
+
+{% endblock %}
