@@ -5,11 +5,12 @@
 {% endblock %}
 
 {% block content %}
+    <p><a href="/">HOME</a></p>
     <h1>Item</h1>
     
     <ul>
         {% for x in myitems %}
-            <li><a href="details/{{ x.id }}">{{ x.name }}  {{ x.lastname }}  {{ x.description }} {{ x.hobby }} {{ x.phone }} </a></li>
+            <li><a href="details/{{ x.id }}">{{ x.name }}  {{ x.lastname }}  </a></li>
         {% endfor %}
     </ul>
 {% endblock %}
