@@ -28,6 +28,6 @@ def main(request):
 def testing(request):
   template = loader.get_template('template.html')
   context = {
-    'fruits': ['Apple', 'Banana', 'Mango', 'Orange', 'Pineapple'],
+    'firstname': 'Rasheedah',
   }
   return HttpResponse(template.render(context, request))
