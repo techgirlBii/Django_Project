@@ -1,15 +1,59 @@
 {% extends "master.html" %}
 
 {% block title %}
-    All Items
+Member Details
 {% endblock %}
 
 {% block content %}
-    <h1>{{ myitems.name }}  {{ myitems.lastname }} </h1>
 
-    <p>Phone : {{ myitems.phone }}</p>
-    <p>Hobby : {{ myitems.hobby }}</p>
-    <p>Description : {{ myitems.description }}</p>
-    <p>Back to <a href="/my_first_app">All Items</a></p>
+<!-- Header -->
+<div class="header">
+  <h1>
+    <i class="fa-solid fa-id-card"></i>
+    Member Details
+  </h1>
+  <a href="/my_first_app">
+    <i class="fa-solid fa-users"></i>
+    All Members
+  </a>
+</div>
+
+<!-- Profile Summary -->
+<div class="card">
+  <h3>
+    <i class="fa-solid fa-user"></i>
+    {{ myitems.name }} {{ myitems.lastname }}
+  </h3>
+  <p>
+    Below are the registered details for this member in the My Tennis Club system.
+  </p>
+</div>
+
+<!-- Details Card -->
+<div class="card">
+  <p>
+    <i class="fa-solid fa-phone"></i>
+    <strong>Phone:</strong> {{ myitems.phone }}
+  </p>
+
+  <p>
+    <i class="fa-solid fa-heart"></i>
+    <strong>Hobby:</strong> {{ myitems.hobby }}
+  </p>
+
+  <p>
+    <i class="fa-solid fa-file-lines"></i>
+    <strong>Description:</strong><br>
+    {{ myitems.description }}
+  </p>
+</div>
+
+<!-- Back Button -->
+<div class="back-wrapper">
+  <a href="/my_first_app" class="back-btn">
+    <i class="fa-solid fa-arrow-left"></i>
+    Back to Members
+  </a>
+</div>
 
 {% endblock %}

@@ -1,16 +1,65 @@
+
 {% extends "master.html" %}
 
 {% block title %}
-    All Items
+All Members
 {% endblock %}
 
 {% block content %}
-    <p><a href="/">HOME</a></p>
-    <h1>Item</h1>
-    
-    <ul>
-        {% for x in myitems %}
-            <li><a href="details/{{ x.id }}">{{ x.name }}  {{ x.lastname }}  </a></li>
-        {% endfor %}
-    </ul>
+
+<!-- Header -->
+<div class="header">
+  <h1>
+    <i class="fa-solid fa-users"></i>
+    All Members
+  </h1>
+  <a href="/">
+    <i class="fa-solid fa-house"></i>
+    Dashboard
+  </a>
+</div>
+
+<!-- Page Intro -->
+<div class="card">
+  
+  <p>
+    Browse through all registered members of My Tennis Club.
+    Select a member to view their full profile and details.
+  </p>
+</div>
+
+<!-- Members List -->
+{% for x in myitems %}
+<div class="card">
+  <h3>
+    <i class="fa-solid fa-user"></i>
+    {{ x.name }} {{ x.lastname }}
+  </h3>
+  <p>
+    Click below to view more information about this member,
+    including contact details and personal description.
+  </p>
+
+  <a href="details/{{ x.id }}" class="back-btn">
+    <i class="fa-solid fa-eye"></i>
+    View Details
+  </a>
+</div>
+{% empty %}
+<div class="card">
+  <p>
+    <i class="fa-solid fa-circle-exclamation"></i>
+    No members have been added yet.
+  </p>
+</div>
+{% endfor %}
+
+<!-- Back Button -->
+<div class="back-wrapper">
+  <a href="/" class="back-btn">
+    <i class="fa-solid fa-arrow-left"></i>
+    Back to Home
+  </a>
+</div>
+
 {% endblock %}

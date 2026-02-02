@@ -1,15 +1,44 @@
 {% extends "master.html" %}
 
 {% block title %}
-  My Tennis Club
+My Tennis Club
 {% endblock %}
 
-
 {% block content %}
-  <h1>My Tennis Club</h1>
 
-  <h3>Members</h3>
-  
-  <p>Check out all our <a href="my_first_app/">members</a></p>
-  
+<!-- Header -->
+<div class="header">
+  <h1><i class="fa-solid fa-tennis-ball"></i> My Tennis Club</h1>
+  <a href="my_first_app/">
+    <i class="fa-solid fa-users"></i>
+    View All Members
+  </a>
+</div>
+
+<!-- Content Cards -->
+<div class="card">
+  <h3><i class="fa-solid fa-circle-info"></i> Club Overview</h3>
+  <p>
+    Welcome to the My Tennis Club management dashboard. Here you can access
+    member information, review club activity, and stay updated on club records.
+  </p>
+</div>
+
+<div class="card">
+  <h3><i class="fa-solid fa-user-group"></i> <a href="my_first_app/"> Members Directory</a></h3>
+  <p>
+    View a complete list of registered members, including personal details,
+    membership status, and participation history within the club.
+  </p>
+</div>
+
+
+<!-- Back Button -->
+<div class="back-wrapper">
+  <a href="javascript:history.back()" class="back-btn">
+    <i class="fa-solid fa-arrow-left"></i>
+    Go Back
+  </a>
+</div>
+
 {% endblock %}
