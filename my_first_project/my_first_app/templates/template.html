@@ -12,6 +12,21 @@
 <!--{% with firstname="Tobias" %}
     <h1>Hello {{ firstname }},  how are you?</h1>
 {% endwith %}>-->
+<table border="2">
+  <tr>
+    <th>ID</th>
+    <th>Lastname</th>
+    <th>Name</th>
+  </tr>
+  {% for x in myitems %}
+     <tr>
+      <td>{{x.id}}</td>
+      <td>{{x.lastname}}</td>
+      <td>{{x.name}}</td>
+     </tr>
+  {% endfor %}
+
+</table>
 
 
 

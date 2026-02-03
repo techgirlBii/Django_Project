@@ -26,8 +26,10 @@ def main(request):
   return HttpResponse(template.render())
 
 def testing(request):
+  myitems = Item.objects.all().values()
   template = loader.get_template('template.html')
   context = {
-    'firstname': 'Rasheedah',
+    'myitems' : myitems,
+    #'firstname': 'Rasheedah',
   }
   return HttpResponse(template.render(context, request))
