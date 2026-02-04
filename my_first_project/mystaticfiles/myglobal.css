@@ -1,0 +1,21 @@
+body {
+    background-color: rgb(233, 233, 238);
+    color: rgb(76, 0, 255);
+    font-weight: 300px;
+}
+
+table {
+    color :rgb(197, 20, 20),
+}
+
+p {
+    font-weight: 600;
+    color: purple;
+    font-size: 70px;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 10%;
+}

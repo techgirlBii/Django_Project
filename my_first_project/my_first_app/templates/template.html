@@ -1,22 +1,14 @@
-{% extends "master.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="{% static 'myglobal.css' %}">
 
-{% block title %}
- testing page
-{% endblock %}
-
-
-{% block content %}
-  
-  <!--<h1> Hello, {{ firstname }}, how are you?</h1>-->
-
-<!--{% with firstname="Tobias" %}
-    <h1>Hello {{ firstname }},  how are you?</h1>
-{% endwith %}>-->
-<table border="2">
-  <tr>
-    <th>ID</th>
-    <th>Lastname</th>
-    <th>Name</th>
+<body>
+   <table border="2">
+   <tr>
+     <th>ID</th>
+     <th>Lastname</th>
+     <th>Name</th>
   </tr>
   {% for x in myitems %}
      <tr>
@@ -27,12 +19,9 @@
   {% endfor %}
 
 </table>
+<p>This is the testing page</p>
 
-
-
-
-
-{% endblock %}
-
+<img src="https://picsum.photos/500/300" alt="images">
+  
 </body>
 </html>
